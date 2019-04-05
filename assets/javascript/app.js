@@ -32,7 +32,7 @@ function GetResults() {
             var headline = $("<div class='title'>");
             headline.text(results[i].headline.main);
 
-            var byLine = $("<div class='autho'>");
+            var byLine = $("<div class='author'>");
             byLine.text(results[i].byline.original);
 
             var badge = $("<span>");
@@ -45,6 +45,7 @@ function GetResults() {
             resultDiv.append(byLine);
 
             $("#results").append(resultDiv);
+            $("#results").append("<br>");
 
 
         }
