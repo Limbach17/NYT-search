@@ -1,14 +1,21 @@
 var apiKey = "rWAnb8AzovM4GAZ2U04UPkpGDAxHwa9G";
-var search ="philadelphia";
 
+var records = 0;
+var search="";
 
-var requestURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + search + " &api-key=" + apiKey;
+var requestURL;
 $(document).ready( function() {
     $("#runSearch").click(GetResults);
     
 });
 
 function GetResults() {
+    event.preventDefault();
+   search = $("#term").val().trim();
+   console.log(search);
+   requestURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + search + " &api-key=" + apiKey;
+   console.log(requestURL);
+
     $.ajax({
         url:requestURL,
         method:"GET"
@@ -16,6 +23,7 @@ function GetResults() {
         console.log(response);
         var results = response.response.docs
         console.log(results);
+        
         for (var i=0;i<results.length;i++) {
 
             var resultDiv = $("<div>");
