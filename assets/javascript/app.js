@@ -29,10 +29,10 @@ function GetResults() {
             var resultDiv = $("<div>");
 
             console.log(results[i].headline.main);
-            var headline = $("<div>");
+            var headline = $("<div class='title'>");
             headline.text(results[i].headline.main);
 
-            var byLine = $("<div>");
+            var byLine = $("<div class='autho'>");
             byLine.text(results[i].byline.original);
 
             var badge = $("<span>");
@@ -43,9 +43,6 @@ function GetResults() {
 
             resultDiv.append(headline);
             resultDiv.append(byLine);
-            
-            
-
 
             $("#results").append(resultDiv);
 
