@@ -4,6 +4,11 @@ var search ="philadelphia";
 
 var requestURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + search + " &api-key=" + apiKey;
 $(document).ready( function() {
+    $("#runSearch").click(GetResults);
+    
+});
+
+function GetResults() {
     $.ajax({
         url:requestURL,
         method:"GET"
@@ -22,15 +27,22 @@ $(document).ready( function() {
             var byLine = $("<div>");
             byLine.text(results[i].byline.original);
 
-            var badge = $("<div>");
+            var badge = $("<span>");
             badge.attr("class", "badge badge-light");
-            badge.text(results[i+1]);
+            badge.text(i+1);
+
+            headline.prepend(badge);
+
+            resultDiv.append(headline);
+            resultDiv.append(byLine);
             
+            
+
+
+            $("#results").append(resultDiv);
 
 
         }
     });
-});
-
-
+}
 
