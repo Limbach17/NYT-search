@@ -9,6 +9,26 @@ $(document).ready( function() {
         method:"GET"
     }).then(function(response) {
         console.log(response);
+        var results = response.response.docs
+        console.log(results);
+        for (var i=0;i<results.length;i++) {
+
+            var resultDiv = $("<div>");
+
+            console.log(results[i].headline.main);
+            var headline = $("<div>");
+            headline.text(results[i].headline.main);
+
+            var byLine = $("<div>");
+            byLine.text(results[i].byline.original);
+
+            var badge = $("<div>");
+            badge.attr("class", "badge badge-light");
+            badge.text(results[i+1]);
+            
+
+
+        }
     });
 });
 
