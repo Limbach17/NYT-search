@@ -12,7 +12,7 @@
 
     <!-- Bootstrap CDN -->
     <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
@@ -23,9 +23,9 @@
         <!-- Jumbotron holds the title section. -->
         <div class='jumbotron'>
             <div class='container'>
-                <h1 class="text-center">The Greatest News Search Evar!</h1>
-                <h2 class="text-center">Search below to find cool shit.</h2>
-                <p class="text-center"><small>enter search query parameters below</small></p>
+                <h1 class="text-center"><i class="far fa-newspaper"></i> The Greatest News Search Evar!</h1>
+                <h2 class="text-center"><i class="fas fa-search-dollar"></i> Search below to find cool shit.</h2>
+                <p class="text-center"><small><i class="far fa-keyboard"></i>  enter search query parameters below</small></p>
             </div>
         </div>
 
@@ -36,7 +36,7 @@
                 <!-- First card: Holds the Word to Guess (blanks and guessed word). -->
                 <div class="card card-default">
                     <div class="card-header">
-                        <h3 class="card-title"><strong>Search Parameters</strong></h3>
+                        <h3 class="card-title"><i class="fas fa-newspaper"></i><strong> Search Parameters</strong></h3>
                     </div>
 
                     <div class="card-body">
@@ -50,21 +50,21 @@
                             <div class="form-group">
                                 <label for="formGroupExampleInput2"><strong>Number of Articles to Retreieve:</strong></label>
                                 <input type="text" class="form-control" id="articleNum"
-                                    placeholder="Enter a whole number">
+                                    placeholder="Enter a whole number...">
                             </div>
                             <div class="form-group">
-                                    <label for="formGroupExampleInput2"><strong>Start Year:</strong></label>
+                                    <label for="formGroupExampleInput3"><strong>Start Year:</strong></label>
                                     <input type="text" class="form-control" id="startYear"
-                                        placeholder="Start year search">
+                                        placeholder="Start year search...">
                             </div>
                             <div class="form-group">
-                                    <label for="formGroupExampleInput2"><strong>End Year:</strong></label>
+                                    <label for="formGroupExampleInput4"><strong>End Year:</strong></label>
                                     <input type="text" class="form-control" id="endYear"
-                                        placeholder="End year search">
+                                        placeholder="End year search...">
                             </div>
                             
-                            <button type="submit" class="btn btn-outline-dark" id="runSearch">SEARCH</button>
-                            <button type="button" class="btn btn-outline-secondary" id="clearSearch">CLEAR RESULTS</button>
+                            <button type="submit" class="btn btn-outline-dark" id="runSearch"><i class="fa fa-search"></i> SEARCH</button>
+                            <button type="button" class="btn btn-outline-secondary" id="clearSearch"><i class="fa fa-trash"></i> CLEAR RESULTS</button>
                         </form>
                     </div>
 
@@ -73,7 +73,7 @@
                 <!-- Results -->
                 <div class="card card-default">
                         <div class="card-header">
-                            <h3 class="card-title"><strong>Top Articles</strong></h3>
+                            <h3 class="card-title"><strong><i class="far fa-calendar-alt"></i> Top Articles</strong></h3>
                         </div>
     
                         <div class="card-body">
